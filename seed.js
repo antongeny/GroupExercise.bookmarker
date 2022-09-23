@@ -26,6 +26,21 @@ const seedDb = async () => {
 		url: "https://www.pokemon.com/us/",
 		categoryId: jobs.name,
 	});
+	const mdn = await Bookmark.create({
+		name: "MDN",
+		url: "https://developer.mozilla.org/en-US/",
+		categoryId: coding.name,
+	});
+
+	const bing = await Bookmark.create({
+		name: "Bing",
+		url: "https://www.bing.com/",
+		categoryId: search.name,
+	});
 };
+// const find = (name) => {
+// 	const category = data.find((post) => post.id === +id);
+// 	return { ...post }; // Again, we copy the post data before returning so the original information is safe.
+// };
 
 seedDb();
